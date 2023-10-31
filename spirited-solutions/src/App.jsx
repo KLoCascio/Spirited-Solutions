@@ -10,7 +10,13 @@ function App() {
     <>
       <h1>Spirited Solutions</h1>
       <p>More than just a cocktail app</p> 
+
       <h2>Group Hackathon</h2>
+
+      <p>Hi Cuties</p>
+    
+      <p>Testing git push.</p>
+
     </>
   )
 }
