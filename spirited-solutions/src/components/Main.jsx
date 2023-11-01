@@ -24,7 +24,6 @@ const Main = (props) => {
     
     return (
         <>
-        <h1>This is from the Main Component</h1>
         <div className="routes-container">
             <Routes>
                 <Route path="/" element={<Home />} />
