@@ -2,9 +2,6 @@ import { useState } from 'react'
 
 import './App.css'
 import { FaHeart } from 'react-icons/fa'
-
-import Details from './components/DrinkDetails'
-import DrinkList from './components/DrinkList'
 import Nav from './components/Nav'
 import Main from './components/Main'
 import Footer from './components/Footer'
@@ -15,9 +12,7 @@ function App() {
   return (
     <>
       <Header />
-    
-      <Nav />
-    
+        
       <Main />
     
       <Footer />
