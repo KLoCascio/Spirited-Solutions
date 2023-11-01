@@ -1,9 +1,46 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
+import { BASE_URL } from '../globals'
 
 const RumList = () => {
+  const [drinks, setDrinks] = useState([])
+
+  useEffect(() => {
+    const getDrinks = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}rum`)
+        console.log(response.data)
+        setDrinks(response.data.drinks)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getDrinks()
+  }, [])
+
+  function getDrinksId(url) {
+    if (url && typeof url === 'string') {
+      let urlParts = url.split('/')
+      if (urlParts.length >= 2) {
+        return urlParts[urlParts.length - 2]
+      }
+    }
+    return 'Unknown'
+  }
+
   return (
-    <div>
-      
+    <div className="drinks">
+      <h1>- Rum Drinks -</h1>
+      {
+        drinks.map((drink, key) => (
+          <Link key={key} to={`/rum/${getDrinksId(drink.idDrink)}`}>
+            <div className="card">
+              <h3>{drink.strDrink}</h3>
+            </div>
+          </Link>
+        ))
+      }
     </div>
   )
 }
