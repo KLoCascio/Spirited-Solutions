@@ -1,4 +1,40 @@
-.Footer {
-  display: flex;
-  justify-content: right;
+html {
+  background-color: black;
+  color: white;
+  margin: 5px;
 }
+
+.Navbar,
+.Footer {
+    padding: 5px;
+    margin: 0 auto;
+
+}
+
+.Navbar {
+  text-align: center;
+}
+
+.Footer {
+  border-top: 1px solid white;
+  text-align: end;
+}
+
+.Header {
+  margin: 0 auto;
+  margin-top: 0;
+  border: 1px solid white;
+  background-image: url("./assets/IndexBanner.jpg");
+  background-size: auto;
+}
+
+/* .Header img {
+  margin: 0 auto;
+  display: flex;
+  width: 672px;
+  height: 378px;
+  max-width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+} */
+
