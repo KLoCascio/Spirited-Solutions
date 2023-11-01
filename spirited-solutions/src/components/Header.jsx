@@ -1,12 +1,10 @@
-import Nav from './Nav'
-
 
 const Header = () => {
 
     return (
-        <div className="header">
-            <img src="./src/assets/IndexBanner.jpg" alt="banner" />
-            <Nav />
+        <div className="Header">
+            <h1> Spirited Solutions </h1>
+            {/* <img src="./src/assets/IndexBanner.jpg" alt="banner" /> */}
         </div>
     )
 
