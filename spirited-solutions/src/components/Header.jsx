@@ -4,7 +4,9 @@
 const Header = () => {
 
     return (
-        <h1>Header</h1>
+        <div className="header">
+            <img src="./src/assets/IndexBanner.jpg" alt="banner" />
+        </div>
     )
 
 }
