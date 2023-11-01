@@ -3,19 +3,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import Details from './components/DrinkDetails'
+import DrinkList from './components/DrinkList'
+import Nav from './components/Nav'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import Header from './components/Header'
+
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <h1>Spirited Solutions</h1>
-      <p>More than just a cocktail app</p> 
-
-      <h2>Group Hackathon</h2>
-
-      <p>Hi Cuties</p>
-    
-      <p>Testing git push.</p>
+      <Header />
+      <Nav />
+      <Main />
+      <Footer />
 
     </>
   )
