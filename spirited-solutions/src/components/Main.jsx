@@ -1,21 +1,23 @@
 import { Route,Routes } from 'react-router-dom'
 
-import BrandyList from "../catagories/BrandyList"
+import Home from "./Home"
+
+import BrandyList from "../categories/BrandyList"
 import BrandyDetails from "../details/BrandyDetails"
 
-import GinList from "../catagories/GinList"
+import GinList from "../categories/GinList"
 import GinDetails from "../details/GinDetails"
 
-import RumList from "../catagories/RumList"
+import RumList from "../categories/RumList"
 import RumDetails from "../details/RumDetails"
 
-import TequilaList from "../catagories/TequilaList"
+import TequilaList from "../categories/TequilaList"
 import TequilaDetails from "../details/TequilaDetails"
 
-import VodkaList from "../catagories/VodkaList"
+import VodkaList from "../categories/VodkaList"
 import VodkaDetails from "../details/VodkaDetails"
 
-import WhiskeyList from "../catagories/WhiskeyList"
+import WhiskeyList from "../categories/WhiskeyList"
 import WhiskeyDetails from "../details/WhiskeyDetails"
 
 const Main = (props) => {
