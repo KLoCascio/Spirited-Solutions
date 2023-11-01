@@ -4,19 +4,28 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { FaHeart } from 'react-icons/fa'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Details from './components/DrinkDetails'
+import DrinkList from './components/DrinkList'
+import Nav from './components/Nav'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
+function App() {
+  
   return (
     <>
-      <h1>Spirited Solutions</h1>
-      <p>More than just a cocktail app</p> 
-
-      <h2>Group Hackathon</h2>
-        <FaHeart />
-      <p>Hi Cuties</p>
+      <Header />
     
-      <p>Testing git push.</p>
+      <Nav />
+    
+      <Main />
+    
+      <Footer />
+      
+      <FaHeart />
+     
+
 
     </>
   )
