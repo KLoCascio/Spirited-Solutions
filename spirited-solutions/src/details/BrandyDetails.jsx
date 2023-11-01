@@ -5,26 +5,31 @@ import { BASE_URL } from '../globals'
 
 const BrandyDetails = () => {
   let { id } = useParams()
-  const [drinks, setDrinks] = useState(null)
+  const [drink, setDrink] = useState(null)
 
   useEffect(() => {
     const getDrinks = async () => {
     try {
       const response = await axios.get(`${ BASE_URL }brandy/${id}`)
-      setDrinks(response.data)
+      setDrink(response.data)
     } catch (error) {
       console.error(error)
     }
   }
   getDrinks()
   }, [])
-  return drinks ? (
+
+
+  return drink ? (
     <div className="details">
-      <h2>{ drinks.strDrink }</h2>
+      <h2>{ drink.strDrink }</h2>
+      <img src={ drink.strDrinkThumb } />
+      <button><Link to="/brandy">Return to List</Link></button>
     </div>    
   ) : (
     <div className="details">
       <h2>Pouring your drink...</h2>
+      <button><Link to="/brandy">Return to List</Link></button>
     </div>
   )
 }

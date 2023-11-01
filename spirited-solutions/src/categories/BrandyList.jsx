@@ -37,6 +37,7 @@ const BrandyList = () => {
           <Link key={key} to={`/brandy/${getDrinksId(drink.idDrink)}`}>
             <div className="card">
               <h3>{drink.strDrink}</h3>
+              <img src={ drink.strDrinkThumb } />
             </div>
           </Link>
         ))
