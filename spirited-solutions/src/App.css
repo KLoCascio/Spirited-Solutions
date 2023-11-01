@@ -1,12 +1,10 @@
 html {
   background-color: black;
   color: white;
-  margin: 5px;
 }
 
 .Navbar,
 .Footer {
-    padding: 5px;
     margin: 0 auto;
 
 }
@@ -22,10 +20,44 @@ html {
 
 .Header {
   margin: 0 auto;
-  margin-top: 0;
+  display: flex;
+  justify-content: center;
   border: 1px solid white;
   background-image: url("./assets/IndexBanner.jpg");
-  background-size: auto;
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
+
+}
+
+.Header h1 {
+  margin: 0;
+}
+
+/* CHANGE THE BANNER BASED ON USELOCATION HERE */
+
+.Bg-Brandy {
+  background-image: url("./assets/BrandyBanner.jpg");
+}
+
+.Bg-Gin {
+  background-image: url("./assets/GinBanner.jpg");
+}
+
+.Bg-Rum {
+  background-image: url("./assets/RumBanner.jpg");
+}
+
+.Bg-Tequila {
+  background-image: url("./assets/TequilaBanner.jpg");
+}
+
+.Bg-Vodka {
+  background-image: url("./assets/VodkaBanner.jpg");
+}
+
+.Bg-Whiskey {
+  background-image: url("./assets/WhiskeyBanner.jpg");
 }
 
 /* .Header img {

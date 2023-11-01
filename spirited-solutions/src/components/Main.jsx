@@ -22,6 +22,7 @@ import WhiskeyDetails from "../details/WhiskeyDetails"
 
 const Main = (props) => {
     
+
     return (
         <>
         <div className="routes-container">
