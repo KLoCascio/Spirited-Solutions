@@ -1,9 +1,52 @@
+import { Route,Routes } from 'react-router-dom'
 
+import BrandyList from "../catagories/BrandyList"
+import BrandyDetails from "../details/BrandyDetails"
 
-const Main = () => {
+import GinList from "../catagories/GinList"
+import GinDetails from "../details/GinDetails"
+
+import RumList from "../catagories/RumList"
+import RumDetails from "../details/RumDetails"
+
+import TequilaList from "../catagories/TequilaList"
+import TequilaDetails from "../details/TequilaDetails"
+
+import VodkaList from "../catagories/VodkaList"
+import VodkaDetails from "../details/VodkaDetails"
+
+import WhiskeyList from "../catagories/WhiskeyList"
+import WhiskeyDetails from "../details/WhiskeyDetails"
+
+const Main = (props) => {
     
     return (
-        <h1>Main</h1>
+        <>
+        <h1>This is from the Main Component</h1>
+        <div className="routes-container">
+            <Routes>
+                <Route path="/" element={<Home />} />
+
+                <Route path="/brandy" element={<BrandyList brandylist={props.brandylist}/>}/>
+                <Route path="/brandy/:id" element={<BrandyDetails brandydetails={props.brandydetails}/>}/>
+
+                <Route path="/gin" element={<GinList ginlist={props.ginlist}/>}/>
+                <Route path="/gin/:id" element={<GinDetails gindetails={props.gindetails}/>}/>
+
+                <Route path="/rum" element={<RumList rumlist={props.rumlist}/>}/>
+                <Route path="/rum/:id" element={<RumDetails rumdetails={props.rumdetails}/>}/>
+
+                <Route path="/tequila" element={<TequilaList tequilalist={props.tequilalist}/>}/>
+                <Route path="/tequila/:id" element={<TequilaDetails tequiladetails={props.tequiladetails}/>}/>
+
+                <Route path="/vodka" element={<VodkaList vodkalist={props.vodkalist}/>}/>
+                <Route path="/vodka/:id" element={<VodkaDetails vodkadetails={props.vodkadetails}/>}/>
+
+                <Route path="whiskey" element={<WhiskeyList whiskeylist={props.whiskeylist}/>}/>
+                <Route path="whiskey/:id" element={<WhiskeyDetails whiskeydetails={props.whiskeydetails}/>}/>
+            </Routes>
+        </div>
+        </>
     )
     
 }
