@@ -4,13 +4,13 @@ const Nav = () => {
 
     return (
         <div className="Navbar">
-            {/* <button><Link to="/">Home</Link> </button>
-            <button><Link to=""> Brandy</Link></button>
-            <button><Link to=""> Gin</Link></button>
-            <button><Link to=""> Rum</Link></button>
-            <button><Link to=""> Tequila</Link></button>
-            <button><Link to=""> Vodka</Link></button>
-            <button><Link to=""> Whiskey</Link></button> */}
+            <button><Link to="/">Home</Link> </button>
+            <button><Link to="/brandy"> Brandy</Link></button>
+            <button><Link to="/gin"> Gin</Link></button>
+            <button><Link to="/rum"> Rum</Link></button>
+            <button><Link to="/tequila"> Tequila</Link></button>
+            <button><Link to="/vodka"> Vodka</Link></button>
+            <button><Link to="/whiskey"> Whiskey</Link></button>
         </div>
     )
 
