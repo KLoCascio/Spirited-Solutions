@@ -19,7 +19,7 @@ export default function TequilaList() {
     },[])
 
     return category ? (
-        <div className='gridContainer' >
+        <div className="grid-container">
              {category.map((drinks) => (
             <Link to = {`/tequila/${drinks.idDrink}`} key = {drinks.idDrink}>
                     <div className="details">

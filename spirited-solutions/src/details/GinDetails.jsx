@@ -32,7 +32,7 @@ export default function GinPage() {
           <p className="drink-info">{gin.strIngredient5} {gin.strMeasure5}</p>
 
           <h4 className="drink-instructions">Instructions:<br/>{gin.strInstructions}</h4>
-          <Link to="/GinList" className="return-link">Return To Gin</Link>
+          <Link to="/gin" className="return-link">Return To Gin</Link>
       </div>
   ) : <h2 className="Finding">Loading Drink...</h2>;
 }

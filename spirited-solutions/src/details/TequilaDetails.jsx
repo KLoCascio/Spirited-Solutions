@@ -32,7 +32,7 @@ export default function TequilaPage() {
           <p className="drink-info">{tequila.strIngredient5} {tequila.strMeasure5}</p>
 
           <h4 className="drink-instructions">Instructions:<br/>{tequila.strInstructions}</h4>
-          <Link to="/TequilaList" className="return-link">Return To Tequila</Link>
+          <Link to="/tequila" className="return-link">Return To Tequila</Link>
       </div>
   ) : <h2 className="Finding">Loading Drink...</h2>;
 }
