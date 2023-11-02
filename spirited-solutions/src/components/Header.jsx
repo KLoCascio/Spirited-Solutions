@@ -21,13 +21,13 @@ if (location.pathname === '/brandy') {
   }
 
     return (
-        <>
+        <div>
             <div className={`Header ${bgClass}`}>
                 <h1> Spirited Solutions </h1>
             </div>
 
             <Nav />
-        </>
+        </div>
     )
 
 }
