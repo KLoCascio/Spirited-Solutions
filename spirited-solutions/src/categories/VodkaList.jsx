@@ -31,7 +31,7 @@ const VodkaList = () => {
 
   return (
     <div className="drinks">
-      <h1>- Vodka Drinks -</h1>
+      <h1>- Whiskey Drinks -</h1>
       {
         drinks.map((drink, key) => (
           <Link key={key} to={`/vodka/${getDrinksId(drink.idDrink)}`}>

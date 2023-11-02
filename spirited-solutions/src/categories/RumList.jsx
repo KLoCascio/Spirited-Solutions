@@ -31,7 +31,7 @@ const RumList = () => {
 
   return (
     <div className="drinks">
-      <h1>- Rum Drinks -</h1>
+      <h1>- Whiskey Drinks -</h1>
       {
         drinks.map((drink, key) => (
           <Link key={key} to={`/rum/${getDrinksId(drink.idDrink)}`}>

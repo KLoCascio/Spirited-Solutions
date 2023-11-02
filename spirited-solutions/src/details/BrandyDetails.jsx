@@ -4,36 +4,27 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 
 const BrandyDetails = () => {
-  let { drink, id } = useParams()
-  const [drinks, setDrink] = useState(null)
-  
-  
+  let { id } = useParams()
+  let { drink } = useParams()
 
-  useEffect(() => {
-    const getDrinks = async () => {
-    try {
-      const response = await axios.get(`${ BASE_URL }brandy/${id}`)
-      setDrink(response.data)
-    } catch (error) {
-      console.error(error)
+
+
+  const [drinks, setDrink] = useState()
+
+  
+  useEffect(()=>{
+    const getDrink = async() => {
+      const response = await axios.get(`http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+      console.log(response)
+      setDrink(response)
     }
-  }
-  getDrinks()
-  }, [])
+    getDrink()
+  },[])
   
   
 
-  return drinks ? (
-    <div className="details">
-      <h2>{ drinks.strDrink }</h2>
-      <img src={ drinks.strDrinkThumb } />
-      <button><Link to="/brandy">Return to List</Link></button>
-    </div>    
-  ) : (
-    <div className="details">
-      <h2>Pouring your drink...</h2>
-      <button><Link to="/brandy">Return to List</Link></button>
-    </div>
+  return  (
+    <h1>Hello</h1>
   )
 }
 

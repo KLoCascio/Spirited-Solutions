@@ -7,13 +7,6 @@ import { BASE_URL } from '../globals'
 const BrandyList = () => {
   const [drinks, setDrinks] = useState([])
 
-  let navigate = useNavigate();
-
-  const details = (drink) => {
-    navigate(`${drink.id}`)
-    console.log(drink)
-  }
-
   useEffect(() => {
     const getDrinks = async () => {
       try {
@@ -42,12 +35,11 @@ const BrandyList = () => {
       <h1>- Brandy Drinks -</h1>
       {
         drinks.map((drink, key) => (
-          
-            <div className="card" >
-              <h3 onClick={() => details(drink)}>{drink.strDrink}</h3>
-              <img src={ drink.strDrinkThumb } />
+          <Link key={key} to={`/brandy/${getDrinksId(drink.idDrink)}`}>
+            <div className="card">
+              <h3>{drink.strDrink}</h3>
             </div>
-          
+          </Link>
         ))
       }
     </div>
