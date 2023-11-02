@@ -21,7 +21,7 @@ export default function Search({onSearch}) {
             value={searchTerm}
             onChange={handleChange}
         />
-        <button onClick={handleSearch}>Submit</button>
+        <button onClick={handleSearch}>Bottoms Up!</button>
         </div>
     )
 }

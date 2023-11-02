@@ -13,8 +13,19 @@ html {
 }
 
 .Navbar {
+
   flex-grow: 1;
   text-align: center;
+}
+
+.nav-link {
+  margin: .1rem;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  box-shadow: 10px, 10px, 5px#535bf2;
 }
 
 .search-container {
