@@ -33,10 +33,13 @@ export default function LiquorList() {
     }
 
     return (
-        <div>
-            <Search onSearch={handleSearch} />
+        <div className="search-container">
+            
+            <h2>Search for an Ingredient</h2>
+            <h4>Watch the magic happen...</h4>
+            <Search className="search-bar" onSearch={handleSearch} />
             {drinks.length === 0 ? (
-                <h2>Search By Liquor</h2>
+            <></>
             ) : (
                 <div className="drinks">
 

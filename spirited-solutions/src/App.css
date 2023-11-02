@@ -1,6 +1,9 @@
 html {
-  background-color: rgba(29, 28, 28, 0.868);
-  color: rgba(233, 119, 25, 0.624);
+
+  background-color: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .Navbar,
@@ -14,9 +17,25 @@ html {
   text-align: center;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15rem;
+}
+
+.search-bar input{
+  line-height: 1.7rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
 .Footer {
   border-top: 1px solid white;
   text-align: end;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .Header {
