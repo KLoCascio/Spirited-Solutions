@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react"
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
-import { BASE_URL } from '../globals'
+// import { BASE_URL } from '../globals'
 
-export default function BrandyPage() {
+const BrandyDetails = () => {
 
-    const [brandy, setBrandy] = useState(null)
-    const { id } = useParams()
+  let { drink, id } = useParams()
+  const [drinks, setDrink] = useState(null)
+  
 
-    useEffect(() => {
-        const getBrandyDetails = async () => {
-            try {
-                const response = await axios.get(`${BASE_URL}lookup.php?i=${id}`)
-                setBrandy(response.data.drinks[0])
-            } catch (error) {
-                console.error("Error fetching brandy details:", error);
-                setBrandy(null)
-        }
+
+  useEffect(() => {
+    const getDrinks = async () => {
+    try {
+      const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+      const drinkData = response.data.drinks[i]
+      console.log(response)
+      setDrink(drinkData)
+    } catch (error) {
+      console.error(error)
+
     }
     getBrandyDetails()
     }, [id])
