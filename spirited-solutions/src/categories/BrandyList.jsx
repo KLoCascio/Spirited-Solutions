@@ -8,7 +8,6 @@ const BrandyList = () => {
   let {drink} = useParams()
   const [drinks, setDrinks] = useState([])
 
-
   useEffect(() => {
     const getDrinks = async () => {
       const response = await axios.get(`www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`)
@@ -45,12 +44,11 @@ const BrandyList = () => {
       <h1>- Brandy Drinks -</h1>
       {
         drinks.map((drink, key) => (
-          
-            <div className="card" >
-              <h3 onClick={() => details(drink)}>{drink.strDrink}</h3>
-              <img src={ drink.strDrinkThumb } />
+          <Link key={key} to={`/brandy/${getDrinksId(drink.idDrink)}`}>
+            <div className="card">
+              <h3>{drink.strDrink}</h3>
             </div>
-          
+          </Link>
         ))
       }
     </div>

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 
+
 export default function BrandyPage() {
 
     const [brandy, setBrandy] = useState(null)
