@@ -22,16 +22,17 @@ export default function RumPage() {
     }, [id])
 
     return rum ? (
-        <div className="details">
-                <p><img src={rum.strDrinkThumb}></img></p>
-                <p>{rum.strDrink}</p>
-                <p>{rum.strMeasure1} {rum.strrum1}</p>
-                <p>{rum.strMeasure2} {rum.strrum2}</p>
-                <p>{rum.strMeasure3} {rum.strrum3}</p>
+      <div className="details">
+          <img src={rum.strDrinkThumb} alt={rum.strDrink} className="drink-image" />
+          <h1 className="drink-title">{rum.strDrink}</h1>
+          <p className="drink-info">{rum.strIngredient1} {rum.strMeasure1}</p>
+          <p className="drink-info">{rum.strIngredient2} {rum.strMeasure2}</p>
+          <p className="drink-info">{rum.strIngredient3} {rum.strMeasure3}</p>
+          <p className="drink-info">{rum.strIngredient4} {rum.strMeasure4}</p>
+          <p className="drink-info">{rum.strIngredient5} {rum.strMeasure5}</p>
 
-            <h4><span>Instructions:</span><br/>{rum.strInstructions}</h4>
-            <Link to="/rumList">Return To Rum</Link>
-        </div>
-    ) : <h2 className="Finding">Loading Drink...</h2>
-
+          <h4 className="drink-instructions">Instructions:<br/>{rum.strInstructions}</h4>
+          <Link to="/RumList" className="return-link">Return To Rum</Link>
+      </div>
+  ) : <h2 className="Finding">Loading Drink...</h2>;
 }

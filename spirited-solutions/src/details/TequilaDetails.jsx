@@ -22,17 +22,17 @@ export default function TequilaPage() {
     }, [id])
 
     return tequila ? (
-        <div className="details">
+      <div className="details">
+          <img src={tequila.strDrinkThumb} alt={tequila.strDrink} className="drink-image" />
+          <h1 className="drink-title">{tequila.strDrink}</h1>
+          <p className="drink-info">{tequila.strIngredient1} {tequila.strMeasure1}</p>
+          <p className="drink-info">{tequila.strIngredient2} {tequila.strMeasure2}</p>
+          <p className="drink-info">{tequila.strIngredient3} {tequila.strMeasure3}</p>
+          <p className="drink-info">{tequila.strIngredient4} {tequila.strMeasure4}</p>
+          <p className="drink-info">{tequila.strIngredient5} {tequila.strMeasure5}</p>
 
-                <p><img src={tequila.strDrinkThumb}></img></p>
-                <p>{tequila.strDrink}</p>
-                <p>{tequila.strMeasure1} {tequila.strtequila1}</p>
-                <p>{tequila.strMeasure2} {tequila.strtequila2}</p>
-                <p>{tequila.strMeasure3} {tequila.strtequila3}</p>
-
-            <h4><span>Instructions:</span><br/>{tequila.strInstructions}</h4>
-            <Link to="/tequilaList">Return To Tequila</Link>
-        </div>
-    ) : <h2 className="Finding">Loading Drink...</h2>
-
+          <h4 className="drink-instructions">Instructions:<br/>{tequila.strInstructions}</h4>
+          <Link to="/TequilaList" className="return-link">Return To Tequila</Link>
+      </div>
+  ) : <h2 className="Finding">Loading Drink...</h2>;
 }

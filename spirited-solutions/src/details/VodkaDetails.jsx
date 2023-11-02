@@ -22,16 +22,17 @@ export default function VodkaPage() {
     }, [id])
 
     return vodka ? (
-        <div className="details">
-                <p><img src={vodka.strDrinkThumb}></img></p>
-                <p>{vodka.strDrink}</p>
-                <p>{vodka.strMeasure1} {vodka.strvodka1}</p>
-                <p>{vodka.strMeasure2} {vodka.strvodka2}</p>
-                <p>{vodka.strMeasure3} {vodka.strvodka3}</p>
+      <div className="details">
+          <img src={vodka.strDrinkThumb} alt={vodka.strDrink} className="drink-image" />
+          <h1 className="drink-title">{vodka.strDrink}</h1>
+          <p className="drink-info">{vodka.strIngredient1} {vodka.strMeasure1}</p>
+          <p className="drink-info">{vodka.strIngredient2} {vodka.strMeasure2}</p>
+          <p className="drink-info">{vodka.strIngredient3} {vodka.strMeasure3}</p>
+          <p className="drink-info">{vodka.strIngredient4} {vodka.strMeasure4}</p>
+          <p className="drink-info">{vodka.strIngredient5} {vodka.strMeasure5}</p>
 
-            <h4><span>Instructions:</span><br/>{vodka.strInstructions}</h4>
-            <Link to="/vodkaList">Return To Vodka</Link>
-        </div>
-    ) : <h2 className="Finding">Loading Drink...</h2>
-
+          <h4 className="drink-instructions">Instructions:<br/>{vodka.strInstructions}</h4>
+          <Link to="/VodkaList" className="return-link">Return To Vodka</Link>
+      </div>
+  ) : <h2 className="Finding">Loading Drink...</h2>;
 }

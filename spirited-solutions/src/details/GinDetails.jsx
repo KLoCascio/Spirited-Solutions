@@ -22,16 +22,17 @@ export default function GinPage() {
     }, [id])
 
     return gin ? (
-        <div className="details">
-                <p><img src={gin.strDrinkThumb}></img></p>
-                <p>{gin.strDrink}</p>
-                <p>{gin.strMeasure1} {gin.strgin1}</p>
-                <p>{gin.strMeasure2} {gin.strgin2}</p>
-                <p>{gin.strMeasure3} {gin.strgin3}</p>
+      <div className="details">
+          <img src={gin.strDrinkThumb} alt={gin.strDrink} className="drink-image" />
+          <h1 className="drink-title">{gin.strDrink}</h1>
+          <p className="drink-info">{gin.strIngredient1} {gin.strMeasure1}</p>
+          <p className="drink-info">{gin.strIngredient2} {gin.strMeasure2}</p>
+          <p className="drink-info">{gin.strIngredient3} {gin.strMeasure3}</p>
+          <p className="drink-info">{gin.strIngredient4} {gin.strMeasure4}</p>
+          <p className="drink-info">{gin.strIngredient5} {gin.strMeasure5}</p>
 
-            <h4><span>Instructions:</span><br/>{gin.strInstructions}</h4>
-            <Link to="/ginList">Return To Gin</Link>
-        </div>
-    ) : <h2 className="Finding">Loading Drink...</h2>
-
+          <h4 className="drink-instructions">Instructions:<br/>{gin.strInstructions}</h4>
+          <Link to="/GinList" className="return-link">Return To Gin</Link>
+      </div>
+  ) : <h2 className="Finding">Loading Drink...</h2>;
 }
