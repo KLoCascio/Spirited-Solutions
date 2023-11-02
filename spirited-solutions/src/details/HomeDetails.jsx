@@ -31,7 +31,7 @@ export default function SearchPage() {
             <p className="drink-info">{whiskey.strIngredient5} {whiskey.strMeasure5}</p>
 
             <h4 className="drink-instructions">Instructions:<br/>{whiskey.strInstructions}</h4>
-            <Link to="/WhiskeyList" className="return-link">Return To Whiskey</Link>
+            <Link to="/" className="return-link">Return To Whiskey</Link>
         </div>
     ) : <h2 className="Finding">Loading Drink...</h2>
 }

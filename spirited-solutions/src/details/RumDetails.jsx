@@ -32,7 +32,7 @@ export default function RumPage() {
           <p className="drink-info">{rum.strIngredient5} {rum.strMeasure5}</p>
 
           <h4 className="drink-instructions">Instructions:<br/>{rum.strInstructions}</h4>
-          <Link to="/RumList" className="return-link">Return To Rum</Link>
+          <Link to="/rum" className="return-link">Return To Rum</Link>
       </div>
   ) : <h2 className="Finding">Loading Drink...</h2>;
 }
