@@ -7,7 +7,7 @@ const BrandyDetails = () => {
   let { drink, id } = useParams()
   const [drinks, setDrink] = useState(null)
   
-  console.log(drink)
+  
 
   useEffect(() => {
     const getDrinks = async () => {
