@@ -1,24 +1,33 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 
 const BrandyList = () => {
+  let {drink} = useParams()
   const [drinks, setDrinks] = useState([])
 
   useEffect(() => {
     const getDrinks = async () => {
-      try {
-        const response = await axios.get(`${BASE_URL}brandy`)
-        console.log(response.data)
-        setDrinks(response.data.drinks)
-      } catch (error) {
-        console.log(error)
-      }
+      const response = await axios.get(`www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`)
+      setDrinks(response.data.drinks)
+      console.log
     }
     getDrinks()
-  }, [])
+  })
+
+  let navigate = useNavigate();
+
+ 
+  const showDrinkDetails = (idDrink) => {
+    navigate(`/Namelist/${idDrink}`)
+  }
+
+  
+
+  
+
 
   function getDrinksId(url) {
     if (url && typeof url === 'string') {

@@ -15,9 +15,6 @@ function App() {
     
       <Footer />
       
-     
-
-
     </>
   )
 }
