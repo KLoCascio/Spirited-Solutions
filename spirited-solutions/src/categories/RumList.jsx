@@ -5,8 +5,6 @@ import axios from 'axios'
 
 export default function RumList() {
     let { cats } = useParams()
-
-
     const [category, setCategory] = useState("")
 
     useEffect(() => {
@@ -19,21 +17,20 @@ export default function RumList() {
     }, [])
 
     return category ? (
-        <div className="grid-container">
-            {category.map((drinks) => (
-                <Link to={`/rum/${drinks.idDrink}`} key={drinks.idDrink}>
-                    <div className="details">
-                        <img className="drink-image" src={drinks.strDrinkThumb}></img>
-                        <p className="drink-title">{drinks.strDrink}</p>
-
-                    </div>
-                </Link>
-            ))}
-
+        <>
+            <div className="grid-container">
+                {category.map((drinks) => (
+                    <Link to={`/rum/${drinks.idDrink}`} key={drinks.idDrink}>
+                        <div className="details">
+                            <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                            <p className="drink-title">{drinks.strDrink}</p>
+                        </div>
+                    </Link>
+                ))}
+            </div>
             <Link to="/rum">Return to Rum</Link>
-        </div>
+        </>
     ) : (
         <h3>Finding Rum...</h3>
     )
 }
-
