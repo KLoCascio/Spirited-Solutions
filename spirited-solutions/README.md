@@ -1,8 +1,24 @@
-# React + Vite
+# Spirited Solutions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Product of Sips and Giggles Studios
 
-Currently, two official plugins are available:
+## WireFrame
+![Wire Frame](<src/assets/Wire Frame.png>)
+Link: https://www.figma.com/file/uzpQiU34HpvpICLgdgtWy2/Spirited-Solutions?type=design&node-id=0%3A1&mode=design&t=5j6dd0CYzIwMHIgv-1
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Final Product
+![Home Screen](<src/assets/Home Screen.png>)
+Home Screen
+
+![Rum Location](<src/assets/Rum Location.png>)
+Example of Directory Location - Rum
+
+## UserStories
+Users can browsers directories by liquor base.
+Users can search by ingredient.
+
+## Technologies
+HTML
+CSS
+JavaScript
+React
