@@ -3,33 +3,28 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 // import { BASE_URL } from '../globals'
 
-const BrandyDetails = () => {
+const BrandyDetails = (props) => {
 
-  let { drink, id } = useParams()
-  const [drinks, setDrink] = useState(null)
-  
+  let { id } = useParams()
+  console.log(id)
+  const [drink, setDrink] = useState("")
 
 
   useEffect(() => {
     const getDrinks = async () => {
-    try {
       const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
-      const drinkData = response.data.drinks[i]
       console.log(response)
-      setDrink(drinkData)
-    } catch (error) {
-      console.error(error)
+      setDrink(response.data.drinks[0])
     }
-  }
   getDrinks()
-  }, [])
-  
-  
+  }, [id])  
 
-  return drinks ? (
+  console.log(drink)
+
+  return drink ? (
     <div className="details">
-      <h2>{ drinks.strDrink }</h2>
-      <img src={ drinks.strDrinkThumb } />
+      <h2>{ drink.strDrink }</h2>
+      <img src={ drink.strDrinkThumb } />
       <button><Link to="/brandy">Return to List</Link></button>
     </div>    
   ) : (
