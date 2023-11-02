@@ -19,10 +19,10 @@ export default function IngredientList() {
     },[])
 
     return category ? (
-        <div>
+        <div className='gridContainer' >
              {category.map((drinks) => (
             <Link to = {`/tequila/${drinks.idDrink}`} key = {drinks.idDrink}>
-                <div>
+                <div className='drinkCards' >
                     <p>{drinks.strDrink}</p>
                     <img src={drinks.strDrinkThumb}></img>
                 </div> 
