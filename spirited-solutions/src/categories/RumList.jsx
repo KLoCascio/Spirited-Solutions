@@ -4,8 +4,8 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default function RumList() {
-    let {cats} = useParams()
-    
+    let { cats } = useParams()
+
 
     const [category, setCategory] = useState("")
 
@@ -16,20 +16,21 @@ export default function RumList() {
             setCategory(response.data.drinks)
         }
         getCategory()
-    },[])
+    }, [])
 
     return category ? (
         <div>
-             {category.map((drinks) => (
-            <Link to = {`/rum/${drinks.idDrink}`} key = {drinks.idDrink}>
-                <div>
-                    <p>{drinks.strDrink}</p>
-                    <img src={drinks.strDrinkThumb}></img>
-                </div> 
-            </Link>
-        ))}
+            {category.map((drinks) => (
+                <Link to={`/rum/${drinks.idDrink}`} key={drinks.idDrink}>
+                    <div className="details">
+                        <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                        <p className="drink-title">{drinks.strDrink}</p>
 
-            <Link to = "/rum">Return to Rum</Link>
+                    </div>
+                </Link>
+            ))}
+
+            <Link to="/rum">Return to Rum</Link>
         </div>
     ) : (
         <h3>Finding Rum...</h3>
