@@ -4,8 +4,8 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default function GinList() {
-    let {cats} = useParams()
-    
+    let { cats } = useParams()
+
 
     const [category, setCategory] = useState("")
 
@@ -16,20 +16,20 @@ export default function GinList() {
             setCategory(response.data.drinks)
         }
         getCategory()
-    },[])
+    }, [])
 
     return category ? (
         <div>
-             {category.map((drinks) => (
-            <Link to = {`/gin/${drinks.idDrink}`} key = {drinks.idDrink}>
-                <div>
-                    <p>{drinks.strDrink}</p>
-                    <img src={drinks.strDrinkThumb}></img>
-                </div> 
-            </Link>
-        ))}
+            {category.map((drinks) => (
+                <Link to={`/gin/${drinks.idDrink}`} key={drinks.idDrink}>
+                    <div className="details">
+                        <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                        <p className="drink-title">{drinks.strDrink}</p>
+                    </div>
+                </Link>
+            ))}
 
-            <Link to = "/gin">Return to Gin</Link>
+            <Link to="/gin">Return to Gin</Link>
         </div>
     ) : (
         <h3>Finding Gin...</h3>

@@ -22,9 +22,9 @@ export default function BrandyList() {
         <div>
              {category.map((drinks) => (
             <Link to = {`/brandy/${drinks.idDrink}`} key = {drinks.idDrink}>
-                <div>
-                    <p>{drinks.strDrink}</p>
-                    <img src={drinks.strDrinkThumb}></img>
+                <div className="details">
+                    <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                    <p className="drink-title">{drinks.strDrink}</p>
                 </div> 
             </Link>
         ))}

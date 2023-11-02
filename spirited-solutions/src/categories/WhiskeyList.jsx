@@ -22,10 +22,9 @@ export default function WhiskeyList() {
         <div>
              {category.map((drinks) => (
             <Link to = {`/whiskey/${drinks.idDrink}`} key = {drinks.idDrink}>
-                <div className="details">
-                <img className="drink-image" src={drinks.strDrinkThumb}></img>
-                <p className="drink-title">{drinks.strDrink}</p>
-
+                    <div className="details">
+                        <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                        <p className="drink-title">{drinks.strDrink}</p>
                 </div> 
             </Link>
         ))}
