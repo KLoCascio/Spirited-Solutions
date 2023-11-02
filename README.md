@@ -3,7 +3,7 @@
 A Product of Sips and Giggles Studios
 
 ## WireFrame
-![Wire Frame](<src/assets/Wire Frame.png>)
+![Wire Frame](<spirited-solutions/src/assets/Wire Frame.png>)
 <p>Link: https://www.figma.com/file/uzpQiU34HpvpICLgdgtWy2/Spirited-Solutions?type=design&node-id=0%3A1&mode=design&t=5j6dd0CYzIwMHIgv-1</p>
 
 ## Final Product
