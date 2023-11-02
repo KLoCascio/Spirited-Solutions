@@ -34,8 +34,6 @@ html {
   margin: 0;
 }
 
-/* CHANGE THE BANNER BASED ON USELOCATION HERE */
-
 .Bg-Brandy {
   background-image: url("./assets/BrandyBanner.jpg");
 }
@@ -60,13 +58,51 @@ html {
   background-image: url("./assets/WhiskeyBanner.jpg");
 }
 
-/* .Header img {
-  margin: 0 auto;
-  display: flex;
-  width: 672px;
-  height: 378px;
-  max-width: 100%;
-  border: 1px solid black;
-  border-radius: 5px;
-} */
+/* WhiskeyPage.css */
 
+.details {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: black;
+}
+
+
+.drink-image {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.drink-title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.drink-info {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.drink-instructions {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.return-link {
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.Finding {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
