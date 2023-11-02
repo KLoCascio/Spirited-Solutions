@@ -13,6 +13,9 @@ Home Screen
 ![Rum Location](<src/assets/Rum Location.png>)
 Example of Directory Location - Rum
 
+![Mobile Appearance](<src/assets/Mobile Appearance.png>)
+Full Responsive CSS
+
 ## UserStories
 Users can browsers directories by liquor base.
 Users can search by ingredient.
