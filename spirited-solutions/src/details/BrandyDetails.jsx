@@ -23,16 +23,17 @@ export default function BrandyPage() {
     }, [id])
 
     return brandy ? (
-        <div className="details">
-                <p><img src={brandy.strDrinkThumb}></img></p>
-                <p>{brandy.strDrink}</p>
-                <p>{brandy.strMeasure1} {brandy.strbrandy1}</p>
-                <p>{brandy.strMeasure2} {brandy.strbrandy2}</p>
-                <p>{brandy.strMeasure3} {brandy.strbrandy3}</p>
+      <div className="details">
+          <img src={brandy.strDrinkThumb} alt={brandy.strDrink} className="drink-image" />
+          <h1 className="drink-title">{brandy.strDrink}</h1>
+          <p className="drink-info">{brandy.strIngredient1} {brandy.strMeasure1}</p>
+          <p className="drink-info">{brandy.strIngredient2} {brandy.strMeasure2}</p>
+          <p className="drink-info">{brandy.strIngredient3} {brandy.strMeasure3}</p>
+          <p className="drink-info">{brandy.strIngredient4} {brandy.strMeasure4}</p>
+          <p className="drink-info">{brandy.strIngredient5} {brandy.strMeasure5}</p>
 
-            <h4><span>Instructions:</span><br/>{brandy.strInstructions}</h4>
-            <Link to="/brandyList">Return To Brandy</Link>
-        </div>
-    ) : <h2 className="Finding">Loading Drink...</h2>
-
+          <h4 className="drink-instructions">Instructions:<br/>{brandy.strInstructions}</h4>
+          <Link to="/BrandyList" className="return-link">Return To Brandy</Link>
+      </div>
+  ) : <h2 className="Finding">Loading Drink...</h2>;
 }
