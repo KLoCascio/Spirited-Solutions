@@ -4,9 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default function BrandyList() {
-    let {cats} = useParams()
-    
-
+    let { cats } = useParams()
     const [category, setCategory] = useState("")
 
     useEffect(() => {
@@ -16,21 +14,22 @@ export default function BrandyList() {
             setCategory(response.data.drinks)
         }
         getCategory()
-    },[])
+    }, [])
 
     return category ? (
-        <div className="grid-container">
-             {category.map((drinks) => (
-            <Link to = {`/brandy/${drinks.idDrink}`} key = {drinks.idDrink}>
-                <div className="details">
-                    <img className="drink-image" src={drinks.strDrinkThumb}></img>
-                    <p className="drink-title">{drinks.strDrink}</p>
-                </div> 
-            </Link>
-        ))}
-
-            <Link to = "/brandy">Return to Whiskey</Link>
-        </div>
+        <>
+            <div className="grid-container">
+                {category.map((drinks) => (
+                    <Link to={`/brandy/${drinks.idDrink}`} key={drinks.idDrink}>
+                        <div className="details">
+                            <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                            <p className="drink-title">{drinks.strDrink}</p>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+            <Link to="/brandy">Return to Brandy</Link>
+        </>
     ) : (
         <h3>Finding Brandy...</h3>
     )

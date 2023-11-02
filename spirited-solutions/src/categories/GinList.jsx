@@ -5,8 +5,6 @@ import axios from 'axios'
 
 export default function GinList() {
     let { cats } = useParams()
-
-
     const [category, setCategory] = useState("")
 
     useEffect(() => {
@@ -19,20 +17,20 @@ export default function GinList() {
     }, [])
 
     return category ? (
-        <div className="grid-container">
-            {category.map((drinks) => (
-                <Link to={`/gin/${drinks.idDrink}`} key={drinks.idDrink}>
-                    <div className="details">
-                        <img className="drink-image" src={drinks.strDrinkThumb}></img>
-                        <p className="drink-title">{drinks.strDrink}</p>
-                    </div>
-                </Link>
-            ))}
-
+        <>
+            <div className="grid-container">
+                {category.map((drinks) => (
+                    <Link to={`/gin/${drinks.idDrink}`} key={drinks.idDrink}>
+                        <div className="details">
+                            <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                            <p className="drink-title">{drinks.strDrink}</p>
+                        </div>
+                    </Link>
+                ))}
+            </div>
             <Link to="/gin">Return to Gin</Link>
-        </div>
+        </>
     ) : (
         <h3>Finding Gin...</h3>
     )
 }
-
