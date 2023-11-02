@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 // import { BASE_URL } from '../globals'
@@ -19,25 +19,23 @@ const BrandyDetails = () => {
       setDrink(drinkData)
     } catch (error) {
       console.error(error)
+
     }
-  }
-  getDrinks()
-  }, [])
-  
-  
+    getBrandyDetails()
+    }, [id])
 
-  return drinks ? (
-    <div className="details">
-      <h2>{ drinks.strDrink }</h2>
-      <img src={ drinks.strDrinkThumb } />
-      <button><Link to="/brandy">Return to List</Link></button>
-    </div>    
-  ) : (
-    <div className="details">
-      <h2>Pouring your drink...</h2>
-      <button><Link to="/brandy">Return to List</Link></button>
-    </div>
-  )
+    return brandy ? (
+        <div className="details">
+\
+                <p><img src={brandy.strDrinkThumb}></img></p>
+                <p>{brandy.strDrink}</p>
+                <p>{brandy.strMeasure1} {brandy.strbrandy1}</p>
+                <p>{brandy.strMeasure2} {brandy.strbrandy2}</p>
+                <p>{brandy.strMeasure3} {brandy.strbrandy3}</p>
+
+            <h4><span>Instructions:</span><br/>{brandy.strInstructions}</h4>
+            <Link to="/brandyList">Return To brandy</Link>
+        </div>
+    ) : <h2 className="Finding">Loading Drink...</h2>
+
 }
-
-export default BrandyDetails
