@@ -1,58 +1,37 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
-import { BASE_URL } from '../globals'
 
-const BrandyList = () => {
-  let {drink} = useParams()
-  const [drinks, setDrinks] = useState([])
+export default function IngredientList() {
+    let {cats} = useParams()
+    
 
-  useEffect(() => {
-    const getDrinks = async () => {
-      const response = await axios.get(`www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`)
-      setDrinks(response.data.drinks)
-      console.log
-    }
-    getDrinks()
-  })
+    const [category, setCategory] = useState("")
 
-  let navigate = useNavigate();
+    useEffect(() => {
+        const getCategory = async () => {
+            const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=brandy`)
+            // console.log(response.data.drinks)
+            setCategory(response.data.drinks)
+        }
+        getCategory()
+    },[])
 
- 
-  const showDrinkDetails = (idDrink) => {
-    navigate(`/Namelist/${idDrink}`)
-  }
+    return category ? (
+        <div>
+             {category.map((drinks) => (
+            <Link to = {`/brandy/${drinks.idDrink}`} key = {drinks.idDrink}>
+                <div>
+                    <p>{drinks.strDrink}</p>
+                    <img src={drinks.strDrinkThumb}></img>
+                </div> 
+            </Link>
+        ))}
 
-  
-
-  
-
-
-  function getDrinksId(url) {
-    if (url && typeof url === 'string') {
-      let urlParts = url.split('/')
-      if (urlParts.length >= 2) {
-        return urlParts[urlParts.length - 2]
-      }
-    }
-    return 'Unknown'
-  }
-
-  return (
-    <div className="drinks">
-      <h1>- Brandy Drinks -</h1>
-      {
-        drinks.map((drink, key) => (
-          <Link key={key} to={`/brandy/${getDrinksId(drink.idDrink)}`}>
-            <div className="card">
-              <h3>{drink.strDrink}</h3>
-            </div>
-          </Link>
-        ))
-      }
-    </div>
-  )
+            <Link to = "/brandy">Return to Whiskey</Link>
+        </div>
+    ) : (
+        <h3>Finding Brandy...</h3>
+    )
 }
-
-export default BrandyList

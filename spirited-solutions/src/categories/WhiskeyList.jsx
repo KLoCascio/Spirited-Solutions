@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function IngredientList() {
     let {cats} = useParams()
-    // console.log(cats)
+    
 
     const [category, setCategory] = useState("")
 
