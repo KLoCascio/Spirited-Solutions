@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 
 import axios from 'axios'
 
-export default function IngredientList() {
+export default function WhiskeyList() {
     let {cats} = useParams()
     
 
@@ -22,9 +22,10 @@ export default function IngredientList() {
         <div>
              {category.map((drinks) => (
             <Link to = {`/whiskey/${drinks.idDrink}`} key = {drinks.idDrink}>
-                <div>
-                    <p>{drinks.strDrink}</p>
-                    <img src={drinks.strDrinkThumb}></img>
+                <div className="details">
+                <img className="drink-image" src={drinks.strDrinkThumb}></img>
+                <p className="drink-title">{drinks.strDrink}</p>
+
                 </div> 
             </Link>
         ))}

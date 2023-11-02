@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 
 import axios from 'axios'
 
-export default function IngredientList() {
+export default function TequilaList() {
     let {cats} = useParams()
     
 

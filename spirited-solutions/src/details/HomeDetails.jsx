@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 
-export default function WhiskeyPage() {
+export default function SearchPage() {
     const [whiskey, setWhiskey] = useState(null)
     const { id } = useParams()
 
