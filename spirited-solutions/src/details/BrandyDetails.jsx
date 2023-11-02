@@ -4,9 +4,11 @@ import axios from 'axios'
 // import { BASE_URL } from '../globals'
 
 const BrandyDetails = () => {
-  let { id } = useParams()
-  const [drink, setDrink] = useState(null)
-  console.log(drink)
+
+  let { drink, id } = useParams()
+  const [drinks, setDrink] = useState(null)
+  
+
 
   useEffect(() => {
     const getDrinks = async () => {
@@ -21,12 +23,13 @@ const BrandyDetails = () => {
   }
   getDrinks()
   }, [])
+  
+  
 
-
-  return drink ? (
+  return drinks ? (
     <div className="details">
-      <h2>{ drink.strDrink }</h2>
-      <img src={ drink.strDrinkThumb } />
+      <h2>{ drinks.strDrink }</h2>
+      <img src={ drinks.strDrinkThumb } />
       <button><Link to="/brandy">Return to List</Link></button>
     </div>    
   ) : (
