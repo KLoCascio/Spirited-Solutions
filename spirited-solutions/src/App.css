@@ -14,9 +14,25 @@ html {
   text-align: center;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15rem;
+}
+
+.search-bar input{
+  line-height: 1.7rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
 .Footer {
   border-top: 1px solid white;
   text-align: end;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .Header {
