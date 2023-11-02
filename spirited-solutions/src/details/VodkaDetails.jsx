@@ -32,7 +32,7 @@ export default function VodkaPage() {
           <p className="drink-info">{vodka.strIngredient5} {vodka.strMeasure5}</p>
 
           <h4 className="drink-instructions">Instructions:<br/>{vodka.strInstructions}</h4>
-          <Link to="/VodkaList" className="return-link">Return To Vodka</Link>
+          <Link to="/vodka" className="return-link">Return To Vodka</Link>
       </div>
   ) : <h2 className="Finding">Loading Drink...</h2>;
 }

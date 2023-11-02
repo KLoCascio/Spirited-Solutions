@@ -33,7 +33,7 @@ export default function BrandyPage() {
           <p className="drink-info">{brandy.strIngredient5} {brandy.strMeasure5}</p>
 
           <h4 className="drink-instructions">Instructions:<br/>{brandy.strInstructions}</h4>
-          <Link to="/BrandyList" className="return-link">Return To Brandy</Link>
+          <Link to="/brandy" className="return-link">Return To Brandy</Link>
       </div>
   ) : <h2 className="Finding">Loading Drink...</h2>;
 }
