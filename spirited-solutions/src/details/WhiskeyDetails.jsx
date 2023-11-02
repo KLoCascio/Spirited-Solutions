@@ -23,7 +23,7 @@ export default function WhiskeyPage() {
 
     return whiskey ? (
         <div className="details">
-\
+
                 <p><img src={whiskey.strDrinkThumb}></img></p>
                 <p>{whiskey.strDrink}</p>
                 <p>{whiskey.strMeasure1} {whiskey.strWhiskey1}</p>
