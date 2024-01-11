@@ -25,5 +25,7 @@ Deploy: https://radiant-dodol-6374e8.netlify.app/
 <p>HTML
 <p>CSS</p>
 <p>JavaScript</p>
+<p>MongoDB</p>
 <p>React</p>
+
 
